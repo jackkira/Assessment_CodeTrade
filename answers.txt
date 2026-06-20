@@ -2,8 +2,7 @@ Question: Which customer has the highest completed-order revenue, and how many d
 Answer: **Reyansh Mehta** has the highest completed-order revenue at **$115,394.38**. The days between their first completed order (March 4, 2025) and most recent completed order (April 22, 2025) is **49 days**.
 
 Question: Which product category brought in the most revenue (completed orders only), andwhat share of that category's revenue came from business vs consumer customers?
--- Add Answer 
-
+Answer: Did not get the answer got the steps.  
 
 Question: List every customer who ordered a discontinued product, and how much they spent onthat product.
 Answer: Here are all customers who ordered discontinued products and their total spending on those products:
