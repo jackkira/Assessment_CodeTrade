@@ -39,3 +39,17 @@ Answer: **Chennai's customers spent more.**
 - **Pune**: $230,841.23 in completed revenue
 
 Chennai's customers generated approximately $115,283 more in revenue than Pune's customers.
+
+Question: Which three products generated the most revenue, and for each, what percentage of itsorders were returned or cancelled rather than completed?
+Answer: The top three products by revenue are:
+
+| Product | Revenue | % of Orders Returned/Cancelled |
+|---------|---------|-------------------------------|
+| Vertex Monitor 27 | $316,694.27 | 26.67% |
+| Nimbus Office Chair | $278,737.38 | 21.05% |
+| Cobalt Standing Desk | $251,656.28 | 16.67% |
+
+**Details:**
+- **Vertex Monitor 27**: 4 out of 15 orders (26.67%) were returned/cancelled
+- **Nimbus Office Chair**: 4 out of 19 orders (21.05%) were returned/cancelled
+- **Cobalt Standing Desk**: 2 out of 12 orders (16.67%) were returned/cancelled

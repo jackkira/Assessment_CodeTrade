@@ -133,7 +133,8 @@ TOOL_SPEC = [
 
 
 def ask(question: str, verbose: bool = False) -> str:
-    client = OpenAI(base_url=OLLAMA_BASE_URL, api_key=OLLAMA_API_KEY)
+    # client = OpenAI(base_url=OLLAMA_BASE_URL, api_key=OLLAMA_API_KEY)
+    client = OpenAI(api_key=OPENAI_API_KEY)
     messages = [
         {"role": "system", "content": SYSTEM},
         {"role": "user", "content": question}
@@ -142,7 +143,7 @@ def ask(question: str, verbose: bool = False) -> str:
 
     for _ in range(MAX_STEPS):
         response = client.chat.completions.create(
-            model=OLLAMA_MODEL,
+            model=MODEL_NAME,
             messages=messages,
             tools=TOOL_SPEC,
             temperature=0.1,
