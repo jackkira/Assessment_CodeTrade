@@ -1,0 +1,41 @@
+Question: Which customer has the highest completed-order revenue, and how many days passedbetween their first and most recent completed order?
+Answer: **Reyansh Mehta** has the highest completed-order revenue at **$115,394.38**. The days between their first completed order (March 4, 2025) and most recent completed order (April 22, 2025) is **49 days**.
+
+Question: Which product category brought in the most revenue (completed orders only), andwhat share of that category's revenue came from business vs consumer customers?
+-- Add Answer 
+
+
+Question: List every customer who ordered a discontinued product, and how much they spent onthat product.
+Answer: Here are all customers who ordered discontinued products and their total spending on those products:
+
+| Customer | Total Spent on Discontinued Products |
+|----------|--------------------------------------|
+| Nisha Nair | $26,361.54 |
+| Aarav Patel | $21,190.28 |
+| Vivaan Rao | $18,802.13 |
+| Dev Patel | $16,854.36 |
+| Anaya Shah | $16,323.45 |
+| Saanvi Mehta | $15,520.53 |
+| Saanvi Mehta | $12,583.57 |
+| Mira Joshi | $11,233.30 |
+| Lila Shah | $10,480.60 |
+| Saanvi Mehta | $9,391.68 |
+| Sara Rao | $8,989.81 |
+| Diya Patel | $6,526.34 |
+| Rohan Shah | $3,336.86 |
+| Reyansh Singh | $3,333.59 |
+| Sara Rao | $3,227.64 |
+| Yash Gupta | $3,205.32 |
+
+**Note:** This includes all completed orders for discontinued products (active=0). Some customers appear multiple times if they ordered different discontinued products.
+
+Question: What is the average number of items per completed order, and which order has themost items?
+Answer: The average number of items per completed order is approximately **1.90 items**, and the order with the most items is **order #55** with **11 items**.
+
+Question: Compare total completed revenue between customers in the two largest cities (bynumber of customers). Which city's customers spent more?
+Answer: **Chennai's customers spent more.**
+
+- **Chennai**: $346,124.32 in completed revenue
+- **Pune**: $230,841.23 in completed revenue
+
+Chennai's customers generated approximately $115,283 more in revenue than Pune's customers.
