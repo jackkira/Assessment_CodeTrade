@@ -1,0 +1,52 @@
+[
+    {"id": "A1",
+    "type": "answerable",
+    "q": "Which customer has the highest completed-order revenue, and how many days passedbetween their first and most recent completed order?",
+    "a": ["Reyansh Mehta", "49"]
+    },
+    {"id": "A3",
+    "type": "answerable",
+    "q": "List every customer who ordered a discontinued product, and how much they spent on that product.",
+    "a":["Anaya Shah", "$16,323.45", "Saanvi Mehta", "$12,583.57", "Lila Shah", "$10,480.60"]
+    },
+    {"id": "A4",
+    "type": "answerable",
+    "q": "What is the average number of items per completed order, and which order has the most items?",
+    "a": ["1.90 items", "order #55 with 11 items"]
+    },
+    {"id": "A5",
+    "type": "answerable",
+    "q": "Compare total completed revenue between customers in the two largest cities (bynumber of customers). Which city's customers spent more?",
+    "a": ["Chennai", "Pune"]
+    },
+    {"id": "A6",
+    "type": "answerable",
+    "q": "Which three products generated the most revenue, and for each, what percentage of itsorders were returned or cancelled rather than completed?",
+    "a": ["Vertex Monitor 27", "26.67%", "Nimbus Office Chair", "21.05%", "Cobalt Standing Desk", "16.67%"]
+    },
+    {"id": "B1",
+    "type": "unanswerable",
+    "q": "What was our profit margin last quarter?",
+    "a": []
+    },
+    {"id": "B2",
+    "type": "unanswerable",
+    "q": "Which customer is most likely to churn next month?",
+    "a": []
+    },
+    {"id": "B3",
+    "type": "unanswerable",
+    "q": "What is the email address for customer_id 5?",
+    "a": []
+    },
+    {"id": "B4",
+    "type": "unanswerable",
+    "q": "How does this quarter compare to the same quarter last year?",
+    "a": []
+    },
+    {"id": "B5",
+    "type": "unanswerable",
+    "q": "Who is the supplier for the Vertex Monitor 27?",
+    "a": []
+    }
+]

@@ -8,7 +8,7 @@ load_dotenv()
 
 ## Load models and API key from environment variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4")
+OPENAI_MODEL_NAME = os.getenv("OPENAI_MODEL_NAME", "gpt-4")
 MAX_STEPS = int(os.getenv("MAX_STEPS", 12))
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
 OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY", "ollama")
@@ -132,9 +132,14 @@ TOOL_SPEC = [
 ]
 
 
-def ask(question: str, verbose: bool = False) -> str:
-    # client = OpenAI(base_url=OLLAMA_BASE_URL, api_key=OLLAMA_API_KEY)
-    client = OpenAI(api_key=OPENAI_API_KEY)
+def ask(question: str, verbose: bool = False, local_llm = False) -> str:
+    if local_llm:
+        client = OpenAI(base_url=OLLAMA_BASE_URL, api_key=OLLAMA_API_KEY)
+        MODEL_NAME = OLLAMA_MODEL
+    else:
+        client = OpenAI(api_key=OPENAI_API_KEY)
+        MODEL_NAME = OPENAI_MODEL_NAME
+
     messages = [
         {"role": "system", "content": SYSTEM},
         {"role": "user", "content": question}
@@ -146,7 +151,7 @@ def ask(question: str, verbose: bool = False) -> str:
             model=MODEL_NAME,
             messages=messages,
             tools=TOOL_SPEC,
-            temperature=0.1,
+            temperature=0,
         )
         message = response.choices[0].message
 
@@ -167,14 +172,15 @@ def ask(question: str, verbose: bool = False) -> str:
 
 
 if __name__ == "__main__":
-    questions = ["Which customer has the highest completed-order revenue, and how many days passedbetween their first and most recent completed order?",
-                 "Which product category brought in the most revenue (completed orders only), andwhat share of that category's revenue came from business vs consumer customers?",
-                 "List every customer who ordered a discontinued product, and how much they spent onthat product.",
-                 "What is the average number of items per completed order, and which order has themost items?",
-                 "Compare total completed revenue between customers in the two largest cities (bynumber of customers). Which city's customers spent more?",
-                 "Which three products generated the most revenue, and for each, what percentage of itsorders were returned or cancelled rather than completed?"]
-    
+    # questions = ["Which customer has the highest completed-order revenue, and how many days passedbetween their first and most recent completed order?",
+    #              "Which product category brought in the most revenue (completed orders only), andwhat share of that category's revenue came from business vs consumer customers?",
+    #              "List every customer who ordered a discontinued product, and how much they spent onthat product.",
+    #              "What is the average number of items per completed order, and which order has themost items?",
+    #              "Compare total completed revenue between customers in the two largest cities (bynumber of customers). Which city's customers spent more?",
+    #              "Which three products generated the most revenue, and for each, what percentage of itsorders were returned or cancelled rather than completed?"]
+
+    questions = ["Which product category brought in the most revenue (completed orders only), andwhat share of that category's revenue came from business vs consumer customers?"]    
     for q in questions:
         print(f"\nQuestion: {q}")
-        answer, steps = ask(q, verbose=False)
+        answer, steps = ask(q, verbose=False, local_llm=False)
         print(f"Answer: {answer}")
